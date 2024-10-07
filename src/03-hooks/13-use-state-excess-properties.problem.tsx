@@ -5,7 +5,7 @@ interface TagState {
   tags: { id: number; value: string }[];
 }
 
-export const Tags = () => {
+export const Tags = () =>  {
   const [state, setState] = useState<TagState>({
     tags: [],
     tagSelected: null,
@@ -17,7 +17,7 @@ export const Tags = () => {
           <button
             key={tag.id}
             onClick={() => {
-              setState((currentState) => ({
+              setState((currentState): TagState => ({
                 ...currentState,
                 // @ts-expect-error
                 tagselected: tag.id,
