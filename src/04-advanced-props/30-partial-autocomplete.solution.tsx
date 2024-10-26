@@ -30,5 +30,6 @@ export const Icon = (props: { size: LooseSize }) => {
 <>
   <Icon size="sm"></Icon>
   <Icon size="xs"></Icon>
+  <Icon size=''
   <Icon size="10px"></Icon>
 </>;

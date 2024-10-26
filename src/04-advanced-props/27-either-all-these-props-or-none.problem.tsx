@@ -15,7 +15,10 @@ type InputProps = (
       value: string;
       onChange: ChangeEventHandler;
     }
-  | {}
+  | {
+    value?: never,
+    onChange?: never
+  }
 ) & {
   label: string;
 };

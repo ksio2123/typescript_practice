@@ -3,7 +3,7 @@
  *
  * 1. Try removing the parentheses, and try to explain the behaviour you notice.
  */
-type ModalProps = (
+type ModalProps = 
   | {
       variant: "no-title";
     }
@@ -11,7 +11,7 @@ type ModalProps = (
       variant: "title";
       title: string;
     }
-) & {
+ & {
   buttonColor: string;
 };
 
