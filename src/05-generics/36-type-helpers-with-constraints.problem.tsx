@@ -1,6 +1,8 @@
 import { Equal, Expect } from "../helpers/type-utils";
 
-type AllOrNothing<T> = T | ToUndefinedObject<T>;
+
+
+type AllOrNothing<T extends Record<any, any>> = T | ToUndefinedObject<T>;
 
 type ToUndefinedObject<T> = Partial<Record<keyof T, undefined>>;
 

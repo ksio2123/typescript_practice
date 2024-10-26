@@ -8,8 +8,8 @@ import { Equal, Expect } from "../helpers/type-utils";
  *
  * There are _many_ different solutions - but they all involve generics.
  */
-export const useStateAsObject = (initial: any) => {
-  const [value, set] = useState(initial);
+export const useStateAsObject = <T>(initial: T) => {
+  const [value, set] = useState<T>(initial);
 
   return {
     value,
