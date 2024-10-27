@@ -18,7 +18,9 @@ useState;
  *
  * HINT - you'll need to use the function keyword THREE times.
  */
-
+function maybeReturnsString(defaultString: string): string;
+function maybeReturnsString(): string | undefined;
+// function useState<S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>];
 function maybeReturnsString(defaultString?: string) {
   // If you pass a string, it always returns a string
   if (defaultString) {

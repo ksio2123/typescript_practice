@@ -13,6 +13,7 @@ type tests = [
   AllOrNothing<number>,
   // @ts-expect-error
   AllOrNothing<undefined>,
+  AllOrNothing<string[]>,
   Expect<Equal<AllOrNothing<{ a: string }>, { a: string } | { a?: undefined }>>
 ];
 

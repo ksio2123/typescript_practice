@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-export type Result<T> = [
-  "loading" | "success" | "error",
-  T | Error | undefined,
-];
+// export type Result<T> = [
+//   "loading" | "success" | "error",
+//   T | Error | undefined,
+// ];
+export type Result<T> = ['loading', undefined] | ['success', T] | ['error', Error]
 
 /**
  * Let's look at one more example of discriminated unions. This time, we're
@@ -26,8 +27,8 @@ export const useData = <T,>(url: string): Result<T> => {
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setResult(["success", data]))
-      .catch((error) => setResult(["error", error]));
+      .then((data) => setResult(["success", data as T]))
+      .catch((error) => setResult(["error", error as Error]));
   }, [url]);
 
   return result;
